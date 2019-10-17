@@ -39,13 +39,13 @@ app.get("/productId/:id", function (req, res) {
     var proid = req.params.id;
 
     // Get the class detail form mongodb
-
+    //hi
     MongoClient.connect(url, option, function (err, db) {
         if (err) throw err;
         var dbo = db.db("fullstack");
         var query = { ProductID: proid };
         //Find the first document in the customers collection:
-        
+
         dbo.collection("products")
             .findOne(query, function (err, result) {
                 if (err) throw err;
