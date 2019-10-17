@@ -45,7 +45,7 @@ app.get("/productId/:id", function (req, res) {
         var dbo = db.db("fullstack");
         var query = { ProductID: proid };
         //Find the first document in the customers collection:
-        //Hello Word
+        
         dbo.collection("products")
             .findOne(query, function (err, result) {
                 if (err) throw err;
